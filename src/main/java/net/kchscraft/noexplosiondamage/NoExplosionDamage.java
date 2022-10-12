@@ -28,7 +28,7 @@ public class NoExplosionDamage extends JavaPlugin implements Listener {
     @EventHandler
     public void onEntityDamage(EntityDamageByEntityEvent event) {
         // Check whether damage source is end crystal or tnt minecart
-        if (!(event.getDamager() instanceof EnderCrystal) || !(event.getDamager() instanceof ExplosiveMinecart)) {
+        if (!(event.getDamager() instanceof EnderCrystal) && !(event.getDamager() instanceof ExplosiveMinecart)) {
             return;
         }
 
