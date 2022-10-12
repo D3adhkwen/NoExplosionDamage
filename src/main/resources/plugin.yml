@@ -1,0 +1,6 @@
+name: NoCrystalDamage
+version: 1.0.0
+main: net.kchscraft.nocrystaldamage.NoCrystalDamage
+description: Disables damage on player from end crystal
+author: D3adhkwen
+api-version: 1.13
