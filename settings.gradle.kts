@@ -1,2 +1,2 @@
-rootProject.name = "NoCrystalDamage"
+rootProject.name = "NoExplosionDamage"
 

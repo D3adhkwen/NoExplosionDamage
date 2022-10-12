@@ -1,6 +1,6 @@
-name: NoCrystalDamage
+name: NoExplosionDamage
 version: 1.0.0
-main: net.kchscraft.nocrystaldamage.NoCrystalDamage
-description: Disables damage on player from end crystal
+main: net.kchscraft.noexplosiondamage.NoExplosionDamage
+description: Disables damage on player from explosions (End Crystal, TNT Minecart)
 author: D3adhkwen
 api-version: 1.13

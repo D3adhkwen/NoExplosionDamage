@@ -1,9 +1,10 @@
-package net.kchscraft.nocrystaldamage;
+package net.kchscraft.noexplosiondamage;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EnderCrystal;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.minecart.ExplosiveMinecart;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -11,7 +12,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 
-public class NoCrystalDamage extends JavaPlugin implements Listener {
+public class NoExplosionDamage extends JavaPlugin implements Listener {
+
     FileConfiguration config = getConfig();
 
     @Override
@@ -25,8 +27,8 @@ public class NoCrystalDamage extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onEntityDamage(EntityDamageByEntityEvent event) {
-        // Check whether damage source is end crystal
-        if (!(event.getDamager() instanceof EnderCrystal)) {
+        // Check whether damage source is end crystal or tnt minecart
+        if (!(event.getDamager() instanceof EnderCrystal) || !(event.getDamager() instanceof ExplosiveMinecart)) {
             return;
         }
 
